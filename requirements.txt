@@ -1,0 +1,8 @@
+Flask
+google-generativeai
+python-dotenv
+gtts
+google-cloud-texttospeech
+pydub 
+ffmpeg
+magenta
