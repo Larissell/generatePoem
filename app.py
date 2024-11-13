@@ -15,7 +15,7 @@ app = Flask(__name__)
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Configurar as credenciais para o Google Cloud Text-to-Speech
-credentials = service_account.Credentials.from_service_account_file('poemas-440417-979af9c8db06.json')
+credentials = service_account.Credentials.from_service_account_file('poemas-440417-d3977df80921.json')
 client = texttospeech.TextToSpeechClient(credentials=credentials)
 
 # Configurações de upload
