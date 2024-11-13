@@ -12,7 +12,7 @@ import io
 app = Flask(__name__)
 
 # Configurar a API do Google AI
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+genai.configure(api_key=os.getenv("AIzaSyAhXGIHz-MzaN5XgWcPSoQvuAGlioARVIE"))
 
 # Configurar as credenciais para o Google Cloud Text-to-Speech
 credentials = service_account.Credentials.from_service_account_file('poemas-440417-b60aad6ca18c.json')
