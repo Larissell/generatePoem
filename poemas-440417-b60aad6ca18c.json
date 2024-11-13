@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "poemas-440417",
+  "private_key_id": "b60aad6ca18c8349b1c25abd95a2040fbd47ad40",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC8uCKo4EcjTtXS\nLeqa3R8SpvuEKcEvwxtlBNZR+TGQZVt5G5jI6HvIlr6NM6CKpRNA2QOn7mpcsQ6/\nc45OqGG2qPRBNQ4HMEsqYxJq8qN2h5K0BUpcPV05nEm1L8bh4mnXVSbcywIxnKZy\n0n/iyK+4pOS274JvuLRV5IJt7Aq4u57kISPTnEPoj0Ko4KB1GzNAiMtWpkB3hSSk\nXy6VfSCyV/4rh1T+3JIHfiDxLxExfeMoOf6ZLy8QKhgthcI0JvsHA6c/yhO4Vjus\nkyE4NStt9uCQje+SsECMByWxv1DGJ0fLihIG5Up5LnjF2RrKYsiAqt8OF0mk1O+x\nU4Nj5QPnAgMBAAECggEAEVsRMPJuCGoT0bW6/uK5cgKHshK8UL4C8x+RQvkFx7pS\nlx45xwxTyfxMak77rj8v40WyB4vZHfeDRt8ukL79PDUTQDtMCXmLCCBpYrWNi/U8\nQYW/s3ZJ8GZBBG1FlKOOc/5sSbT6hCvccPCOpgF/4PLP5/UPTA1dZGLUuJ2TKi71\nLUGKYI6rnSud61CYkVrtATP+4OMwfx7Glz3oLMbE0iRl59DfQIk3vO+mwWp0ceTh\nCQQygZkXgeV9sdlpthFbP3jwlL3pfJFVmD0+Sn52l4X55ldQqk/NHBxPcQqe69Qv\n4gG5Q6hKwKAN9gMBuk1b9Oz1+70bcJ6CE5bP/QXEwQKBgQDvYV6rQ+0gx0ZbtyUV\nhCCyUMpl2OZG0eF74bf6PxQ1mVB1HYLymZHzj7LiNLai1Qg8G5ETE+OPnWB83Mv6\nKYVXnmOAxfAFuFcotkcOCHHSuftleLrZWeU4VMU3ogFqJqe938xemeM9rkEtBUBp\nU1vG9HgasM+U9jCqujFURzIKJwKBgQDJ0lccghN/MV9sg80eMeTOIp70c2BOf2TL\nmH2Il39Bd1Atu56HKT+JJXgbh3mIxcD/enl31hlD2Iq/dCFuMBdFk3InxyQn2LN4\nS7LgMW/lGHPZbeWTuJmPVJxXaUg7/dYSPbu1DU3HS0Op8Yc9gQFRUQj4FSQBbknE\n/GtSUsIQQQKBgQDjWUPTPxEgd4KQKtISrEltcaO4tRaHnmAcCxVzm6MzAKhUgrHS\nfR4MB6dqhYwL/G30wG25g8M1q89u5zjnH7YfsDNqoxNCK4DEDtJPNp/79l0YU2CK\ne4FjTcd8/eWADrRzdfEgy+DxvOTzwDAbmGrq+1ZyawjLvkIcc/fTxkZ1MwKBgQCo\nYmUptOE9ct0RtZmygqBK2BnVDFoixCk9sLmz9+pFnZ14upvWWzTWYTunhE2DLrMK\ntI2ZzTiBIa8Jc4Pc4iTYeN96jqz8zdFXIZlZcgXQl6k4lHdB23fLXSWfzIhm/S7Z\nQ0ZUFYh6KbKHnKtgRjzqMnkQOtsykmjcAFoucjvVwQKBgGtZNNBAUuZZaQrHQ7Bp\nZJkpyMD1Kot8ZAxzmN7eKxMa9lMlRIbCBC90M1vZgJQ7g/NIeX1oc0U0+94tWwz6\nWStADwI5wL1KFGiLw9gblYxmh0d5LRR4V/CO6dAvmGGh4/5y1P89zSm6/HNhJXZW\n1wvDQOGLX0RRZmMEnVn7+puh\n-----END PRIVATE KEY-----\n",
+  "client_email": "poemas-294@poemas-440417.iam.gserviceaccount.com",
+  "client_id": "102450249337102207142",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/poemas-294%40poemas-440417.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
