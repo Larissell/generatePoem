@@ -34,44 +34,47 @@ def allowed_file(filename):
 @app.route('/', methods=['GET', 'POST'])
 def generate_poem():
     if request.method == 'GET':
+        # Renderiza o formulário para enviar a imagem
         return render_template('generate_poem.html')
-
+    
     if request.method == 'POST':
+        # Verificar se uma imagem foi enviada
         if 'image' not in request.files:
             return jsonify({"error": "Nenhuma imagem foi enviada!"}), 400
 
         image_file = request.files['image']
         
+        # Verificar se o arquivo tem uma extensão permitida
         if image_file and allowed_file(image_file.filename):
             filename = secure_filename(image_file.filename)
             filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            #filepath = os.path.join(app.config['UPLOAD_FOLDER'], 'teste.jpg')
             image_file.save(filepath)
-            print(f"Arquivo salvo em: {filepath}")
-            
+            print(filepath)
+           # image = Image.open(io.BytesIO(image_file.read()))
             image = Image.open(filepath)
 
-            # Chamar a função para gerar o poema
-            try:
-                poem_text = generate_poem_from_image(image)
-                print(f"Poema gerado: {poem_text}")
+            # Chamar o Google AI Studio para gerar o poema
+            #uploaded_file = genai.upload_file(filepath, mime_type="image/jpeg")
 
-                # Convertendo o poema em áudio
-                audio_filename = 'poem_audio.mp3'
-                audio_filepath = os.path.join(app.root_path, 'static', audio_filename)
-                convert_text_to_speech(poem_text, audio_filepath)
 
-                # Adicionar fundo musical
-                final_audio_filepath = os.path.join(app.root_path, 'static', 'final_poem_with_music.mp3')
-                background_music_filepath = os.path.join(app.root_path, 'static', 'background_music.mp3')
-                add_background_music(audio_filepath, background_music_filepath, final_audio_filepath)
+            poem_text = generate_poem_from_image(image)
+            
+            # Convertendo o poema em áudio com Google Cloud Text-to-Speech
+            audio_filename = 'poem_audio.mp3'
+            audio_filepath = os.path.join('static', audio_filename)
+            convert_text_to_speech(poem_text, audio_filepath)
 
-                # Renderizar o template com o poema e o áudio final
-                return render_template('generate_poem.html', poem=poem_text, audio_file=final_audio_filepath)
-            except Exception as e:
-                print(f"Erro ao gerar o poema ou processar o áudio: {e}")
-                return jsonify({"error": f"Ocorreu um erro: {e}"}), 500
+            # Adicionar fundo musical ao áudio gerado
+            final_audio_filepath = 'static/final_poem_with_music.mp3'
+            background_music_filepath = 'static/background_music.mp3'  
+            add_background_music(audio_filepath, background_music_filepath, final_audio_filepath)
+            
+            # Renderizando o template HTML com o poema e o áudio final
+            return render_template('generate_poem.html', poem=poem_text, audio_file=final_audio_filepath)
         else:
             return jsonify({"error": "Formato de arquivo não suportado!"}), 400
+
 
 def upload_to_gemini(path, mime_type=None):
   """Uploads the given file to Gemini.
