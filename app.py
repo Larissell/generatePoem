@@ -6,7 +6,7 @@ from google.cloud import texttospeech  # Importando Google Cloud Text-to-Speech
 from google.oauth2 import service_account
 from pydub import AudioSegment
 from PIL import Image
-import io
+#import io
 
 
 app = Flask(__name__)
@@ -57,7 +57,6 @@ def generate_poem():
             # Chamar o Google AI Studio para gerar o poema
             #uploaded_file = genai.upload_file(filepath, mime_type="image/jpeg")
 
-
             poem_text = generate_poem_from_image(image)
             
             # Convertendo o poema em áudio com Google Cloud Text-to-Speech
@@ -71,7 +70,8 @@ def generate_poem():
             add_background_music(audio_filepath, background_music_filepath, final_audio_filepath)
             
             # Renderizando o template HTML com o poema e o áudio final
-            return render_template('generate_poem.html', poem=poem_text, audio_file=final_audio_filepath)
+            return render_template('generate_poem.html', poem=poem_text, audio_file=final_audio_filepath, filename=filename)
+
         else:
             return jsonify({"error": "Formato de arquivo não suportado!"}), 400
 
@@ -138,7 +138,7 @@ def add_background_music(poem_audio_path, background_music_path, output_path):
     background_music = AudioSegment.from_file(background_music_path)
 
     # Ajustar o volume da música de fundo para que não sobreponha a voz do poema
-    background_music = background_music - 20  # Diminui o volume da música de fundo em 20 dB
+    background_music = background_music - 25  # Diminui o volume da música de fundo em 20 dB
 
     # Fazer com que a duração da música de fundo seja igual à do áudio do poema
     if len(background_music) > len(poem_audio):
