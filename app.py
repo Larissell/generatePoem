@@ -138,7 +138,7 @@ def add_background_music(poem_audio_path, background_music_path, output_path):
     background_music = AudioSegment.from_file(background_music_path)
 
     # Ajustar o volume da música de fundo para que não sobreponha a voz do poema
-    background_music = background_music - 25  # Diminui o volume da música de fundo em 20 dB
+    background_music = background_music + 5  # Diminui o volume da música de fundo em 20 dB
 
     # Fazer com que a duração da música de fundo seja igual à do áudio do poema
     if len(background_music) > len(poem_audio):
